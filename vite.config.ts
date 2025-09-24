@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/PeaceCharterTeam/', // GitHub Pages base path for TEROS228/PeaceCharterTeam
+  publicDir: 'public', // Ensure public directory is copied
 })
