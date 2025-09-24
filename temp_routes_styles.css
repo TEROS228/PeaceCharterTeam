@@ -1,0 +1,270 @@
+/* Стили для страницы маршрутов - темная тема */
+.routes-page {
+  padding: 100px 0 60px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.routes-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(40, 40, 40, 0.9) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.routes-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.routes-hero .lead {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.route-card {
+  background: rgba(26, 26, 26, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.route-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.route-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.route-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.route-card:hover .route-image img {
+  transform: scale(1.05);
+}
+
+.route-content {
+  padding: 25px;
+}
+
+.route-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.route-description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.route-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.route-detail {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.route-detail i {
+  margin-right: 8px;
+  color: var(--primary);
+}
+
+.route-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.highlight-tag {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.btn-back-custom {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-back-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  color: var(--white);
+}
+
+/* Мобильная адаптация для страницы маршрутов */
+@media (max-width: 768px) {
+  .routes-page {
+    padding: 80px 0 40px;
+  }
+  
+  .routes-hero {
+    margin-bottom: 40px;
+    padding: 30px 20px;
+  }
+  
+  .routes-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .routes-hero .lead {
+    font-size: 1.1rem;
+  }
+  
+  .routes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .route-card {
+    border-radius: 16px;
+  }
+  
+  .route-image {
+    height: 180px;
+  }
+  
+  .route-content {
+    padding: 20px;
+  }
+  
+  .route-name {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .route-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .route-details {
+    margin-bottom: 15px;
+  }
+  
+  .route-highlights {
+    margin-bottom: 15px;
+  }
+  
+  .highlight-tag {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+  
+  .btn-back-custom {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .routes-page {
+    padding: 70px 0 30px;
+  }
+  
+  .routes-hero {
+    margin-bottom: 30px;
+    padding: 25px 15px;
+  }
+  
+  .routes-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .routes-hero .lead {
+    font-size: 1rem;
+  }
+  
+  .routes-grid {
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .route-image {
+    height: 160px;
+  }
+  
+  .route-content {
+    padding: 15px;
+  }
+  
+  .route-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .route-description {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  
+  .route-details {
+    margin-bottom: 12px;
+  }
+  
+  .route-highlights {
+    margin-bottom: 12px;
+  }
+  
+  .highlight-tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  
+  .btn-back-custom {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
