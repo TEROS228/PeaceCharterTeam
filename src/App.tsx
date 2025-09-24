@@ -10,7 +10,7 @@ import './styles/globals.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/PeaceCharterTeam">
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/booking" element={<Layout><Booking /></Layout>} />
