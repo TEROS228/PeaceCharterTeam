@@ -31,11 +31,11 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { href: '#hero', label: 'Главная' },
-    { href: '#fleet', label: 'Катамараны' },
-    { href: '/routes', label: 'Маршруты', isRoute: true },
-    { href: '#food-menu', label: 'Меню' },
-    { href: '#contact', label: 'Контакты' },
+    { href: '#hero', label: 'Главная', icon: 'bi-house' },
+    { href: '#fleet', label: 'Катамараны', icon: 'bi-water' },
+    { href: '/routes', label: 'Маршруты', icon: 'bi-geo-alt', isRoute: true },
+    { href: '#food-menu', label: 'Меню', icon: 'bi-cup-hot' },
+    { href: '#contact', label: 'Контакты', icon: 'bi-telephone' },
   ];
 
   return (
@@ -46,11 +46,12 @@ const Header: React.FC = () => {
           onClick={() => handleNavClick('#hero')}
           style={{ cursor: 'pointer' }}
         >
-          <i className="bi bi-water" style={{ fontSize: '1.5rem', marginRight: '0.5rem' }}></i>
+          <i className="bi bi-water" style={{ fontSize: '1.5rem', marginRight: '0.5rem' }}></i>                                                                 
           <span>Peace Charter</span>
         </div>
         
-        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
+        {/* Десктопная навигация */}
+        <nav className="nav-desktop">
           <ul>
             {navItems.map((item, index) => (
               <li key={index}>
@@ -75,6 +76,38 @@ const Header: React.FC = () => {
               </li>
             ))}
           </ul>
+        </nav>
+
+        {/* Мобильная навигация */}
+        <nav className={`nav-mobile ${isMenuOpen ? 'active' : ''}`}>
+          <div className="mobile-menu-content">
+            {navItems.map((item, index) => (
+              <div key={index} className="mobile-menu-item">
+                {item.isRoute ? (
+                  <Link 
+                    to={item.href} 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="mobile-menu-link"
+                  >
+                    <i className={`bi ${item.icon}`}></i>
+                    <span>{item.label}</span>
+                  </Link>
+                ) : (
+                  <a 
+                    href={item.href} 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.href);
+                    }}
+                    className="mobile-menu-link"
+                  >
+                    <i className={`bi ${item.icon}`}></i>
+                    <span>{item.label}</span>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
         </nav>
 
         <div 
