@@ -16,7 +16,7 @@ const Routes: React.FC = () => {
       id: 1,
       name: "1 День. Пхукет - Острова Кхай -Райнг Яй - Нака",
       duration: "8 часов",
-      image: "/PeaceCharterTeam/images/routes/koh-hai.jpg",
+      image: "/images/routes/koh-hai.jpg",
       description: "Острова Кхай, Райнг Яй и Нака с белоснежными пляжами, кристально чистой водой и жемчужными фермами.",
       highlights: ["ОСТРОВ КХАЙ", "Райнг Яй", "Нака", "Жемчужные фермы"]
     },
@@ -24,7 +24,7 @@ const Routes: React.FC = () => {
       id: 2,
       name: "1 День. Пхукет - Пханг Нга (остров Хонг - остров Дж. Бонда)",
       duration: "10 часов",
-      image: "/PeaceCharterTeam/images/routes/phang-nga-bay.jpg",
+      image: "/images/routes/phang-nga-bay.jpg",
       description: "Остров Джеймса Бонда (Ко Тапу) и остров Хонг с известняковыми скалами, кристально чистыми водами и живописными лагунами.",
       highlights: ["Остров Джеймса Бонда", "Остров Хонг", "Залив Пханг Нга", "Каякинг"]
     },
@@ -32,7 +32,7 @@ const Routes: React.FC = () => {
       id: 3,
       name: "1 День. Пхукет - Остров Хонг (Краби)",
       duration: "10 часов",
-      image: "/PeaceCharterTeam/images/routes/koh-hong-krabi.jpg",
+      image: "/images/routes/koh-hong-krabi.jpg",
       description: "Остров Хонг в провинции Краби с живописной лагуной, белоснежным пляжем Пелай и тропической растительностью.",
       highlights: ["Остров Хонг", "Пляж Пелай", "Скрытая лагуна", "Снорклинг"]
     },
@@ -40,7 +40,7 @@ const Routes: React.FC = () => {
       id: 4,
       name: "2 Дня. Пхукет - остров Рача Яй",
       duration: "2 дня",
-      image: "/PeaceCharterTeam/images/routes/racha-island.jpg",
+      image: "/images/routes/racha-island.jpg",
       description: "Остров Рача Яй с белоснежными пляжами, коралловыми рифами и тропической растительностью, напоминающий кадры из фильма 'Баунти'.",
       highlights: ["Остров Рача Яй", "Коралловые рифы", "Снорклинг"]
     },
@@ -48,7 +48,7 @@ const Routes: React.FC = () => {
       id: 5,
       name: "2 Дня. Пхукет - Краби (Чикен Айленд + Ао Нанг + Ралей бич)",
       duration: "2 дня",
-      image: "/PeaceCharterTeam/images/routes/krabi-bay.jpg",
+      image: "/images/routes/krabi-bay.jpg",
       description: "Провинция Краби с островом Чикен Айленд, пляжем Ао Нанг и знаменитым Ралей бич.",
       highlights: ["Чикен Айленд", "Ао Нанг", "Ралей бич",]
     },
@@ -56,7 +56,7 @@ const Routes: React.FC = () => {
       id: 6,
       name: "2 Дня. Пхукет - остров Пи Пи (бухта Майя бэй фильм 'Пляж' + Пхи Пхи дон)",
       duration: "2 дня",
-      image: "/PeaceCharterTeam/images/routes/phi-phi-islands.jpg",
+      image: "/images/routes/phi-phi-islands.jpg",
       description: "Острова Пхи Пхи с бухтой Майя Бэй из фильма 'Пляж' и островом Пхи-Пхи-Дон с белоснежными пляжами и джунглями.",
       highlights: ["Майя Бэй", "Пхи-Пхи-Дон", "Фильм 'Пляж'", "Вечеринки"]
     },
@@ -64,7 +64,7 @@ const Routes: React.FC = () => {
       id: 7,
       name: "3 Дня. Остров Ко Рок",
       duration: "3 дня",
-      image: "/PeaceCharterTeam/images/routes/koh-rok.jpg",
+      image: "/images/routes/koh-rok.jpg",
       description: "Уединенные острова Рок и Ха в провинции Транг с нетронутым подводным миром и спокойной атмосферой.",
       highlights: ["Остров Ко Рок", "Остров Ко Ха", "Снорклинг", "Уединение"]
     },
@@ -72,7 +72,7 @@ const Routes: React.FC = () => {
       id: 8,
       name: "3 Дня. Симиланские острова",
       duration: "3 дня",
-      image: "/PeaceCharterTeam/images/routes/similan-islands.jpg",
+      image: "/images/routes/similan-islands.jpg",
       description: "Симиланские острова - национальный парк Таиланда, входящий в десятку лучших мест для дайвинга в мире.",
       highlights: ["Симиланские острова", "Китовая акула", "Национальный парк"]
     },
@@ -80,7 +80,7 @@ const Routes: React.FC = () => {
       id: 9,
       name: "3 Дня. Остров Ланта",
       duration: "3 дня",
-      image: "/PeaceCharterTeam/images/routes/koh-lanta.jpg",
+      image: "/images/routes/koh-lanta.jpg",
       description: "Остров Ланта - четвертый по величине остров Таиланда с уютной атмосферой, живописными закатами и песчаными пляжами.",
       highlights: ["Остров Ланта", "Закаты", "Уют", "Релакс"]
     },
@@ -88,7 +88,7 @@ const Routes: React.FC = () => {
       id: 10,
       name: "7 Дней. Большое путешествие по Андаманскому морю",
       duration: "7 дней",
-      image: "/PeaceCharterTeam/images/routes/7-day-adventure.jpg",
+      image: "/images/routes/7-day-adventure.jpg",
       description: "Эксклюзивное 7-дневное путешествие по самым красивым островам Андаманского моря. Посетите залив Пханг Нга, острова Пхи-Пхи, Рок, Рача Яй и многие другие уникальные места.",
       highlights: ["Пханг Нга", "Пхи-Пхи", "Острова Рок", "Рача Яй", "Рыбалка", "Снорклинг"]
     }

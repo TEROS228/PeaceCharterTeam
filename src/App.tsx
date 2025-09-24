@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
 import Layout from './components/Layout/Layout'
 import Home from './pages/Home/Home'
 import Booking from './pages/Booking/Booking'
@@ -10,23 +9,8 @@ import RouteDetail from './pages/Routes/RouteDetail/RouteDetail'
 import './styles/globals.css'
 
 function App() {
-  useEffect(() => {
-    // Обрабатываем перенаправления с 404.html
-    const l = window.location;
-    if (l.search) {
-      const q: { [key: string]: string } = {};
-      l.search.slice(1).split('&').forEach(function(v) {
-        const a = v.split('=');
-        q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-      });
-      if (q['/']) {
-        window.history.replaceState(null, '', l.pathname.slice(0, -1) + q['/'] + l.hash);
-      }
-    }
-  }, []);
-
   return (
-    <Router basename="/PeaceCharterTeam">
+    <Router>
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/booking" element={<Layout><Booking /></Layout>} />
