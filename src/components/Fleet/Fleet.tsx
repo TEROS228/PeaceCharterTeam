@@ -12,7 +12,7 @@ const Fleet: React.FC = () => {
         <div className="fleet-grid">
           <div className="yacht-card">
             <div className="yacht-image">
-              <img src="/images/fountaine-pajot/thumbs/main.jpg" alt="Fountaine Pajot" />
+              <img src="./images/fountaine-pajot/thumbs/main.jpg" alt="Fountaine Pajot" />
               <div className="yacht-overlay">
                 <span className="yacht-price">от 40,000 THB</span>
                 <Link to="/fountaine-pajot" className="btn-back-custom">Подробнее</Link>
@@ -34,7 +34,7 @@ const Fleet: React.FC = () => {
 
           <div className="yacht-card">
             <div className="yacht-image">
-              <img src="/images/lucia-40/thumbs/main.jpg" alt="Lucia 40" />
+              <img src="./images/lucia-40/thumbs/main.jpg" alt="Lucia 40" />
               <div className="yacht-overlay">
                 <span className="yacht-price">от 40,000 THB</span>
                 <Link to="/lucia-40" className="btn-back-custom">Подробнее</Link>

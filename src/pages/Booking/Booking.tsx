@@ -56,7 +56,7 @@ const Booking: React.FC = () => {
         <div className="yachts-grid">
           {/* Fountaine Pajot */}
           <div className="yacht-card">
-            <img src="/images/fountaine-pajot/thumbs/main.jpg" className="card-img-top" alt="Fountaine Pajot" />
+            <img src="./images/fountaine-pajot/thumbs/main.jpg" className="card-img-top" alt="Fountaine Pajot" />
             <div className="card-body">
               <h5 className="card-title">Astrea 42</h5>
               <p className="card-text">Роскошный катамаран для незабываемого отдыха на Пхукете</p>
@@ -77,7 +77,7 @@ const Booking: React.FC = () => {
 
           {/* Lucia 40 */}
           <div className="yacht-card">
-            <img src="/images/lucia-40/thumbs/main.jpg" className="card-img-top" alt="Lucia 40" />
+            <img src="./images/lucia-40/thumbs/main.jpg" className="card-img-top" alt="Lucia 40" />
             <div className="card-body">
               <h5 className="card-title">Lucia 40</h5>
               <p className="card-text">Просторный и комфортабельный катамаран для большой компании</p>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Yacht } from '../../../types';
 
 const FountainePajot: React.FC = () => {
-  const [mainImage, setMainImage] = useState('/images/fountaine-pajot/thumbs/main.jpg');
+  const [mainImage, setMainImage] = useState('./images/fountaine-pajot/thumbs/main.jpg');
   const [activeThumb, setActiveThumb] = useState('main');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
@@ -19,23 +19,23 @@ const FountainePajot: React.FC = () => {
     capacity: 10,
     cabins: 4,
     year: 2024,
-    image: "/images/fountaine-pajot/thumbs/main.jpg",
+    image: "./images/fountaine-pajot/thumbs/main.jpg",
     available: true,
     description: "Astrea 42 — этот катамаран сочетает в себе все что нужно, чтобы обеспечить безупречное удовольствие от пребывания на борту. 42-футовый парусный катамаран отличается обилием естественного света, энергичными линиями, элегантными жилыми помещениями и непревзойденным уровнем комфорта.",
     specs: "Длина: 12.58 м, Ширина: 7.20 м, Осадка: 1.25 м"
   };
 
   const images = [
-    { id: 'main', src: '/images/fountaine-pajot/thumbs/main.jpg', alt: 'Главный вид' },
-    { id: 'interior1', src: '/images/fountaine-pajot/thumbs/interior1.jpg', alt: 'Интерьер 1' },
-    { id: 'interior2', src: '/images/fountaine-pajot/thumbs/interior2.jpg', alt: 'Интерьер 2' },
-    { id: 'deck1', src: '/images/fountaine-pajot/thumbs/deck1.jpg', alt: 'Палуба 1' },
-    { id: 'deck2', src: '/images/fountaine-pajot/thumbs/deck2.jpg', alt: 'Палуба 2' },
-    { id: 'cabin1', src: '/images/fountaine-pajot/thumbs/cabin1.jpg', alt: 'Каюта 1' },
-    { id: 'cabin2', src: '/images/fountaine-pajot/thumbs/cabin2.jpg', alt: 'Каюта 2' },
-    { id: 'kitchen', src: '/images/fountaine-pajot/thumbs/kitchen.jpg', alt: 'Кухня' },
-    { id: 'bathroom', src: '/images/fountaine-pajot/thumbs/bathroom.jpg', alt: 'Ванная' },
-    { id: 'view', src: '/images/fountaine-pajot/thumbs/view.jpg', alt: 'Вид с палубы' }
+    { id: 'main', src: './images/fountaine-pajot/thumbs/main.jpg', alt: 'Главный вид' },
+    { id: 'interior1', src: './images/fountaine-pajot/thumbs/interior1.jpg', alt: 'Интерьер 1' },
+    { id: 'interior2', src: './images/fountaine-pajot/thumbs/interior2.jpg', alt: 'Интерьер 2' },
+    { id: 'deck1', src: './images/fountaine-pajot/thumbs/deck1.jpg', alt: 'Палуба 1' },
+    { id: 'deck2', src: './images/fountaine-pajot/thumbs/deck2.jpg', alt: 'Палуба 2' },
+    { id: 'cabin1', src: './images/fountaine-pajot/thumbs/cabin1.jpg', alt: 'Каюта 1' },
+    { id: 'cabin2', src: './images/fountaine-pajot/thumbs/cabin2.jpg', alt: 'Каюта 2' },
+    { id: 'kitchen', src: './images/fountaine-pajot/thumbs/kitchen.jpg', alt: 'Кухня' },
+    { id: 'bathroom', src: './images/fountaine-pajot/thumbs/bathroom.jpg', alt: 'Ванная' },
+    { id: 'view', src: './images/fountaine-pajot/thumbs/view.jpg', alt: 'Вид с палубы' }
   ];
 
   const croppedImages = ['kitchen', 'bathroom', 'view'];

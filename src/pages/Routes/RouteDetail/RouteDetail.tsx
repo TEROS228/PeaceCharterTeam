@@ -25,7 +25,7 @@ const RouteDetail: React.FC = () => {
       id: 1,
       name: "1 День. Пхукет - Острова Кхай -Райнг Яй - Нака",
       duration: "8 часов",
-      image: "/images/routes/koh-hai.jpg",
+      image: "./images/routes/koh-hai.jpg",
       description: "Острова Кхай, Райнг Яй и Нака с белоснежными пляжами, кристально чистой водой и жемчужными фермами.",
       highlights: ["ОСТРОВ КХАЙ", "Райнг Яй", "Нака", "Жемчужные фермы"],
       fullDescription: `ОСТРОВА КХАЙ (Khai islands) - это группа из трёх островов: Кхай Нок, Кхай Нуй и Кхай Най. На всех 3 островах Кай лазурного цвета вода, белоснежный песок, и огромное количество тропических рыб прямо у берега. Особенно тут понравится детям, они могут кормить рыбок на мелководье бананами или хлебом. Острова Кай ещё называют "островами миллиона рыбок".
@@ -54,13 +54,13 @@ Rang Yai Island – сравнительно тихое и безлюдное м
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/koh-hai-snorkeling.jpg"
+      additionalPhoto: "./images/routes/koh-hai-snorkeling.jpg"
     },
     {
       id: 2,
       name: "1 День. Пхукет - Пханг Нга (остров Хонг - остров Дж. Бонда)",
       duration: "10 часов",
-      image: "/images/routes/phang-nga-bay.jpg",
+      image: "./images/routes/phang-nga-bay.jpg",
       description: "Остров Джеймса Бонда (Ко Тапу) и остров Хонг с известняковыми скалами, кристально чистыми водами и живописными лагунами.",
       highlights: ["Остров Джеймса Бонда", "Остров Хонг", "Залив Пханг Нга", "Каякинг"],
       fullDescription: `ОСТРОВ ДЖЕЙМСА БОНДА В ТАЙЛАНДЕ появился после того, как одна из скал в Андаманском море, находящаяся в двадцати километрах на северо-восток от побережья Пхукета, стала декорацией к фильму «Человек с золотым пистолетом». Выбрали ее на эту роль по многим причинам: за необычную форму, завораживающе красивые окрестности, кристально чистые волны, целующие великолепные пляжи... В общем, Роджеру Муру (Агент 007, он же Джеймс Бонд) и Кристоферу Ли (киллер международного класса Скарманги) надо было очень постараться, чтобы не потеряться на фоне всего этого великолепия.
@@ -87,13 +87,13 @@ Rang Yai Island – сравнительно тихое и безлюдное м
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/james-bond-island.jpg"
+      additionalPhoto: "./images/routes/james-bond-island.jpg"
     },
     {
       id: 3,
       name: "1 День. Пхукет - Остров Хонг (Краби)",
       duration: "10 часов",
-      image: "/images/routes/koh-hong-krabi.jpg",
+      image: "./images/routes/koh-hong-krabi.jpg",
       description: "Остров Хонг в провинции Краби с живописной лагуной, белоснежным пляжем Пелай и тропической растительностью.",
       highlights: ["Остров Хонг", "Пляж Пелай", "Скрытая лагуна", "Снорклинг"],
       fullDescription: `В КРАБИ есть несколько островов, которые заслуживают особого внимания со стороны туристов. Они привлекают своими красивыми пейзажами и белоснежными пляжами. Одним из них является Хонг. Небольшое скалистое образование со всех сторон покрытое тропической растительностью. Его изюминка – большая красивая пляжная полоса, о которой наслышаны далеко за пределами Тайланда.
@@ -135,13 +135,13 @@ Rang Yai Island – сравнительно тихое и безлюдное м
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/koh-hong-lagoon-krabi.jpg"
+      additionalPhoto: "./images/routes/koh-hong-lagoon-krabi.jpg"
     },
     {
       id: 4,
       name: "2 Дня. Пхукет - остров Рача Яй",
       duration: "2 дня",
-      image: "/images/routes/racha-island.jpg",
+      image: "./images/routes/racha-island.jpg",
       description: "Остров Рача Яй с белоснежными пляжами, коралловыми рифами и тропической растительностью, напоминающий кадры из фильма 'Баунти'.",
       highlights: ["Остров Рача Яй", "Коралловые рифы", "Снорклинг"],
       fullDescription: `ОСТРОВ РАЧА ЯЙ располагается в 20 километрах к югу от острова Пхукет. Его длина составляет около полутора километров, а ширина – около 3 км. Он знаменит своими белоснежными пляжами и коралловыми рифами, поистине сказочной природой. Остров Рача Яй омывает чистейшая, прозрачная морская вода, его рифы имеют богатую морскую флору и фауну. Это идеальное место для тех, кто обожает на отдыхе заняться снорклингом или дайвингом.
@@ -189,13 +189,13 @@ Rang Yai Island – сравнительно тихое и безлюдное м
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/racha-coral-reef.jpg"
+      additionalPhoto: "./images/routes/racha-coral-reef.jpg"
     },
     {
       id: 5,
       name: "2 Дня. Пхукет - Краби (Чикен Айленд + Ао Нанг + Ралей бич)",
       duration: "2 дня",
-      image: "/images/routes/krabi-bay.jpg",
+      image: "./images/routes/krabi-bay.jpg",
       description: "Провинция Краби с островом Чикен Айленд, пляжем Ао Нанг и знаменитым Ралей бич.",
       highlights: ["Чикен Айленд", "Ао Нанг", "Ралей бич"],
       fullDescription: `ДВУХДНЕВНЫЙ МАРШРУТ ПО КРАБИ - это уникальное путешествие по одной из самых живописных провинций Таиланда, которая славится своими драматическими скалами, кристально чистыми водами и потрясающими пляжами.
@@ -245,13 +245,13 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/railay-beach.jpg"
+      additionalPhoto: "./images/routes/railay-beach.jpg"
     },
     {
       id: 6,
       name: "2 Дня. Пхукет - остров Пи Пи (бухта Майя бэй фильм 'Пляж' + Пхи Пхи дон)",
       duration: "2 дня",
-      image: "/images/routes/phi-phi-islands.jpg",
+      image: "./images/routes/phi-phi-islands.jpg",
       description: "Острова Пхи Пхи с бухтой Майя Бэй из фильма 'Пляж' и островом Пхи-Пхи-Дон с белоснежными пляжами и джунглями.",
       highlights: ["Майя Бэй", "Пхи-Пхи-Дон", "Фильм 'Пляж'", "Вечеринки"],
       fullDescription: `ДВУХДНЕВНЫЙ МАРШРУТ К ОСТРОВАМ ПХИ ПХИ - это путешествие к легендарным местам, которые стали символом тропического рая благодаря фильму "Пляж" с Леонардо Ди Каприо.
@@ -304,13 +304,13 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/maya-bay-beach.jpg"
+      additionalPhoto: "./images/routes/maya-bay-beach.jpg"
     },
     {
       id: 7,
       name: "3 Дня. Остров Ко Рок",
       duration: "3 дня",
-      image: "/images/routes/koh-rok.jpg",
+      image: "./images/routes/koh-rok.jpg",
       description: "Уединенные острова Рок и Ха в провинции Транг с нетронутым подводным миром и спокойной атмосферой.",
       highlights: ["Остров Ко Рок", "Остров Ко Ха", "Снорклинг", "Уединение"],
       fullDescription: `ТРЕХДНЕВНОЕ ПУТЕШЕСТВИЕ К ОСТРОВАМ РОК И ХА - это уникальная возможность посетить одни из самых уединенных и красивых островов в окрестностях Пхукета, расположенных в провинции Транг.
@@ -347,13 +347,13 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/koh-rok-snorkeling.jpg"
+      additionalPhoto: "./images/routes/koh-rok-snorkeling.jpg"
     },
     {
       id: 8,
       name: "3 Дня. Симиланские острова",
       duration: "3 дня",
-      image: "/images/routes/similan-islands.jpg",
+      image: "./images/routes/similan-islands.jpg",
       description: "Симиланские острова - национальный парк Таиланда, входящий в десятку лучших мест для дайвинга в мире.",
       highlights: ["Симиланские острова", "Китовая акула", "Национальный парк"],
       fullDescription: `ТРЕХДНЕВНОЕ ПУТЕШЕСТВИЕ К СИМИЛАНСКИМ ОСТРОВАМ - это уникальная возможность посетить одно из самых легендарных мест для дайвинга в мире, расположенное в 100 км на северо-запад от Пхукета.
@@ -396,13 +396,13 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/similan-whale-shark.jpg"
+      additionalPhoto: "./images/routes/similan-whale-shark.jpg"
     },
     {
       id: 9,
       name: "3 Дня. Остров Ланта",
       duration: "3 дня",
-      image: "/images/routes/koh-lanta.jpg",
+      image: "./images/routes/koh-lanta.jpg",
       description: "Остров Ланта - четвертый по величине остров Таиланда с уютной атмосферой, живописными закатами и песчаными пляжами.",
       highlights: ["Остров Ланта", "Закаты", "Уют", "Релакс"],
       fullDescription: `ТРЕХДНЕВНОЕ ПУТЕШЕСТВИЕ НА ОСТРОВ ЛАНТА - это уникальная возможность посетить четвертый по величине остров Таиланда, который славится своей уютной атмосферой и живописными закатами.
@@ -440,13 +440,13 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       ],
       bestTime: "Ноябрь - Апрель",
       maxGuests: 12,
-      additionalPhoto: "/images/routes/lanta-sunset.jpg"
+      additionalPhoto: "./images/routes/lanta-sunset.jpg"
     },
     {
       id: 10,
       name: "7 Дней. Большое путешествие по Андаманскому морю",
       duration: "7 дней",
-      image: "/images/routes/7-day-adventure.jpg",
+      image: "./images/routes/7-day-adventure.jpg",
       description: "Эксклюзивное 7-дневное путешествие по самым красивым островам Андаманского моря. Посетите Симиланские острова, Пхи-Пхи, Краби и многие другие уникальные места.",
       highlights: ["Пханг Нга", "Пхи-Пхи", "Острова Рок", "Рача Яй", "Рыбалка", "Снорклинг"],
       fullDescription: `ЭКСКЛЮЗИВНОЕ 7-ДНЕВНОЕ ПУТЕШЕСТВИЕ ПО АНДАМАНСКОМУ МОРЮ - это уникальная возможность посетить самые красивые и знаменитые острова Таиланда за одно путешествие. Этот маршрут объединяет лучшие места Андаманского моря в одно незабываемое приключение.
@@ -517,39 +517,39 @@ CHICKEN ISLAND (ОСТРОВ КУРИЦЫ)
       maxGuests: 10,
       dayPhotos: {
         "День 1": [
-          "/images/routes/7-day/day1-phang-nga.jpg",
-          "/images/routes/7-day/day1-panak-cave.jpg",
-          "/images/routes/7-day/day1-hong-island.jpg"
+          "./images/routes/7-day/day1-phang-nga.jpg",
+          "./images/routes/7-day/day1-panak-cave.jpg",
+          "./images/routes/7-day/day1-hong-island.jpg"
         ],
         "День 2": [
-          "/images/routes/7-day/day2-hong-lagoon.jpg",
-          "/images/routes/7-day/day2-yawasam-reef.jpg",
-          "/images/routes/7-day/day2-railay-beach.jpg"
+          "./images/routes/7-day/day2-hong-lagoon.jpg",
+          "./images/routes/7-day/day2-yawasam-reef.jpg",
+          "./images/routes/7-day/day2-railay-beach.jpg"
         ],
         "День 3": [
-          "/images/routes/7-day/day3-bamboo-snorkeling.jpg",
-          "/images/routes/7-day/day3-maya-bay.jpg",
-          "/images/routes/7-day/day3-phi-phi-fire-show.jpg"
+          "./images/routes/7-day/day3-bamboo-snorkeling.jpg",
+          "./images/routes/7-day/day3-maya-bay.jpg",
+          "./images/routes/7-day/day3-phi-phi-fire-show.jpg"
         ],
         "День 4": [
-          "/images/routes/7-day/day4-phi-phi-viewpoint.jpg",
-          "/images/routes/7-day/day4-haa-islands.jpg",
-          "/images/routes/7-day/day4-rock-transition.jpg"
+          "./images/routes/7-day/day4-phi-phi-viewpoint.jpg",
+          "./images/routes/7-day/day4-haa-islands.jpg",
+          "./images/routes/7-day/day4-rock-transition.jpg"
         ],
         "День 5": [
-          "/images/routes/7-day/day5-rock-waterfall.jpg",
-          "/images/routes/7-day/day5-rock-beach.jpg",
-          "/images/routes/7-day/day5-rock-monitor-lizard.jpg"
+          "./images/routes/7-day/day5-rock-waterfall.jpg",
+          "./images/routes/7-day/day5-rock-beach.jpg",
+          "./images/routes/7-day/day5-rock-monitor-lizard.jpg"
         ],
         "День 6": [
-          "/images/routes/7-day/day6-fishing.jpg",
-          "/images/routes/7-day/day6-racha-yai.jpg",
-          "/images/routes/7-day/day6-diving.jpg"
+          "./images/routes/7-day/day6-fishing.jpg",
+          "./images/routes/7-day/day6-racha-yai.jpg",
+          "./images/routes/7-day/day6-diving.jpg"
         ],
         "День 7": [
-          "/images/routes/7-day/day7-racha-noi.jpg",
-          "/images/routes/7-day/day7-final-snorkeling.jpg",
-          "/images/routes/7-day/day7-phuket-return.jpg"
+          "./images/routes/7-day/day7-racha-noi.jpg",
+          "./images/routes/7-day/day7-final-snorkeling.jpg",
+          "./images/routes/7-day/day7-phuket-return.jpg"
         ]
       }
     }
