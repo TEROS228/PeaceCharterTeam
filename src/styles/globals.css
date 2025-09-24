@@ -157,7 +157,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, rgba(26, 82, 118, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%),
-                url('./images/hero-background.jpg'),
+                url('/PeaceCharterTeam/images/hero-background.jpg'),
                 linear-gradient(135deg, #1a5276 0%, #3498db 100%);
     background-size: cover;
     background-position: center;

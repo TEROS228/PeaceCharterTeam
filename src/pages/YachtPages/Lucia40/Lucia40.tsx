@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Yacht } from '../../../types';
 
 const Lucia40: React.FC = () => {
-  const [mainImage, setMainImage] = useState('./images/lucia-40/thumbs/main.jpg');
+  const [mainImage, setMainImage] = useState('images/lucia-40/thumbs/main.jpg');
   const [activeThumb, setActiveThumb] = useState('main');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
@@ -19,23 +19,23 @@ const Lucia40: React.FC = () => {
     capacity: 12,
     cabins: 4,
     year: 2019,
-    image: "./images/lucia-40/thumbs/main.jpg",
+    image: "images/lucia-40/thumbs/main.jpg",
     available: true,
     description: "Lucia 40 — идеальный катамаран для тех, кто ценит комфорт и простор. Этот 40-футовый парусный катамаран предлагает превосходное сочетание производительности и роскоши, делая его идеальным выбором для семейного отдыха или путешествия с друзьями.",
     specs: "Длина: 12.00 м, Ширина: 6.50 м, Осадка: 1.1 м"
   };
 
   const images = [
-    { id: 'main', src: './images/lucia-40/thumbs/main.jpg', alt: 'Главный вид' },
-    { id: 'interior1', src: './images/lucia-40/thumbs/interior1.jpg', alt: 'Интерьер 1' },
-    { id: 'interior2', src: './images/lucia-40/thumbs/interior2.jpg', alt: 'Интерьер 2' },
-    { id: 'deck1', src: './images/lucia-40/thumbs/deck1.jpg', alt: 'Палуба 1' },
-    { id: 'deck2', src: './images/lucia-40/thumbs/deck2.jpg', alt: 'Палуба 2' },
-    { id: 'cabin1', src: './images/lucia-40/thumbs/cabin1.jpg', alt: 'Каюта 1' },
-    { id: 'cabin2', src: './images/lucia-40/thumbs/cabin2.jpg', alt: 'Каюта 2' },
-    { id: 'kitchen', src: './images/lucia-40/thumbs/kitchen.jpg', alt: 'Кухня' },
-    { id: 'bathroom', src: './images/lucia-40/thumbs/bathroom.jpg', alt: 'Ванная' },
-    { id: 'view', src: './images/lucia-40/thumbs/view.jpg', alt: 'Вид с палубы' }
+    { id: 'main', src: 'images/lucia-40/thumbs/main.jpg', alt: 'Главный вид' },
+    { id: 'interior1', src: 'images/lucia-40/thumbs/interior1.jpg', alt: 'Интерьер 1' },
+    { id: 'interior2', src: 'images/lucia-40/thumbs/interior2.jpg', alt: 'Интерьер 2' },
+    { id: 'deck1', src: 'images/lucia-40/thumbs/deck1.jpg', alt: 'Палуба 1' },
+    { id: 'deck2', src: 'images/lucia-40/thumbs/deck2.jpg', alt: 'Палуба 2' },
+    { id: 'cabin1', src: 'images/lucia-40/thumbs/cabin1.jpg', alt: 'Каюта 1' },
+    { id: 'cabin2', src: 'images/lucia-40/thumbs/cabin2.jpg', alt: 'Каюта 2' },
+    { id: 'kitchen', src: 'images/lucia-40/thumbs/kitchen.jpg', alt: 'Кухня' },
+    { id: 'bathroom', src: 'images/lucia-40/thumbs/bathroom.jpg', alt: 'Ванная' },
+    { id: 'view', src: 'images/lucia-40/thumbs/view.jpg', alt: 'Вид с палубы' }
   ];
 
   const croppedImages = ['cabin1', 'cabin2', 'kitchen', 'bathroom', 'view'];
