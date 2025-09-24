@@ -1,0 +1,363 @@
+/* 🚀 СУПЕР КРУТАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ 🚀 */
+
+/* ===== БАЗОВЫЕ МОБИЛЬНЫЕ СТИЛИ ===== */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Разрешаем выделение текста в нужных местах */
+p, h1, h2, h3, h4, h5, h6, span, div[contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* ===== ПЛАВНЫЕ АНИМАЦИИ ДЛЯ МОБИЛЬНЫХ ===== */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* ===== КРУТЫЕ TOUCH-ВЗАИМОДЕЙСТВИЯ ===== */
+.touch-feedback {
+  position: relative;
+  overflow: hidden;
+}
+
+.touch-feedback::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.touch-feedback:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== МОБИЛЬНАЯ НАВИГАЦИЯ ===== */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin: 0 4px;
+  position: relative;
+}
+
+.mobile-nav-item.active {
+  color: #0d6efd;
+  background: rgba(13, 110, 253, 0.1);
+}
+
+.mobile-nav-item i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.mobile-nav-item span {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ===== КРУТЫЕ КАРТОЧКИ ДЛЯ МОБИЛЬНЫХ ===== */
+.mobile-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.mobile-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mobile-card:hover .mobile-card-image img {
+  transform: scale(1.05);
+}
+
+.mobile-card-content {
+  padding: 20px;
+}
+
+/* ===== КРУТЫЕ КНОПКИ ДЛЯ МОБИЛЬНЫХ ===== */
+.mobile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 56px; /* Минимальная высота для touch */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-btn-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  color: white;
+}
+
+.mobile-btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-btn-secondary {
+  background: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+  border: 1px solid rgba(108, 117, 125, 0.2);
+}
+
+.mobile-btn-secondary:active {
+  background: rgba(108, 117, 125, 0.2);
+}
+
+/* ===== КРУТЫЕ ФОРМЫ ДЛЯ МОБИЛЬНЫХ ===== */
+.mobile-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 16px;
+  background: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.mobile-input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+  transform: translateY(-2px);
+}
+
+.mobile-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 16px;
+  background: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.mobile-textarea:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== КРУТЫЕ МОДАЛЬНЫЕ ОКНА ===== */
+.mobile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.mobile-modal-content {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-modal.show .mobile-modal-content {
+  transform: translateY(0);
+}
+
+/* ===== КРУТЫЕ СВАЙП-ЖЕСТЫ ===== */
+.swipe-container {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.swipe-item {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== КРУТЫЕ ЗАГРУЗКИ ===== */
+.mobile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.mobile-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(13, 110, 253, 0.1);
+  border-left: 4px solid #0d6efd;
+  border-radius: 50%;
+  animation: mobile-spin 1s linear infinite;
+}
+
+@keyframes mobile-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== КРУТЫЕ УВЕДОМЛЕНИЯ ===== */
+.mobile-toast {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  transform: translateY(-100px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-toast.show {
+  transform: translateY(0);
+}
+
+/* ===== АДАПТИВНЫЕ РАЗМЕРЫ ===== */
+@media (max-width: 480px) {
+  .mobile-card-content {
+    padding: 16px;
+  }
+  
+  .mobile-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+  
+  .mobile-input,
+  .mobile-textarea {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-card-content {
+    padding: 12px;
+  }
+  
+  .mobile-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ===== ТЕМНАЯ ТЕМА ДЛЯ МОБИЛЬНЫХ ===== */
+@media (prefers-color-scheme: dark) {
+  .mobile-card {
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-nav {
+    background: rgba(26, 26, 26, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-input,
+  .mobile-textarea {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .mobile-modal-content {
+    background: #1a1a1a;
+  }
+  
+  .mobile-toast {
+    background: #1a1a1a;
+    color: #fff;
+  }
+}
+
+/* ===== БЕЗОПАСНЫЕ ОБЛАСТИ ДЛЯ IPHONE ===== */
+@supports (padding: max(0px)) {
+  .mobile-nav {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+  
+  .mobile-modal-content {
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+}

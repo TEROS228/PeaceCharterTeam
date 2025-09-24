@@ -1,0 +1,26 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 0;
+}
+
+/* Мобильная навигация */
+@media (max-width: 768px) {
+  .mobile-padding-bottom {
+    padding-bottom: 80px;
+  }
+}
+
+/* Безопасные области для iPhone */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    .mobile-padding-bottom {
+      padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
+    }
+  }
+}

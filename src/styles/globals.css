@@ -2740,3 +2740,199 @@ section:nth-child(even) {
         height: 180px;
     }
 }
+/* ===== СУПЕР КРУТАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
+
+/* Базовые мобильные стили */
+@media (max-width: 768px) {
+  /* Убираем горизонтальную прокрутку */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Улучшаем читаемость текста */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Оптимизируем заголовки */
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  /* Крутые карточки маршрутов */
+  .route-card {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .route-card:active {
+    transform: scale(0.98);
+  }
+  
+  .route-image {
+    height: 200px;
+  }
+  
+  .route-content {
+    padding: 20px;
+  }
+  
+  /* Крутые кнопки */
+  .btn-back-custom {
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-back-custom:active {
+    transform: translateY(2px);
+  }
+  
+  /* Hero секция для мобильных */
+  .hero-section {
+    padding: 60px 0;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Навигация */
+  .navbar {
+    padding: 12px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  /* Формы */
+  .form-control {
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Контейнеры */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Отступы для мобильной навигации */
+  .mobile-padding-bottom {
+    padding-bottom: 80px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .route-content {
+    padding: 16px;
+  }
+  
+  .btn-back-custom {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+  
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Крошечные экраны */
+@media (max-width: 360px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+  
+  .route-content {
+    padding: 12px;
+  }
+  
+  .btn-back-custom {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Ландшафтная ориентация */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    padding: 40px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Темная тема для мобильных */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .route-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-control {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    background: #2a2a2a;
+  }
+}
+
+/* Безопасные области для iPhone */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    .mobile-padding-bottom {
+      padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
+    }
+  }
+}
