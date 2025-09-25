@@ -3780,3 +3780,32 @@ body {
     font-size: 0.95rem;
   }
 }
+
+/* Мобильные стили для hero-секции - убираем белые края */
+@media (max-width: 768px) {
+    .hero-section {
+        margin: 0 !important;
+        border-radius: 0 !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        width: calc(100% + 30px) !important;
+    }
+    
+    .hero-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+        width: calc(100% + 20px) !important;
+    }
+    
+    .hero-section .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
