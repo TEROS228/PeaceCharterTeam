@@ -10,19 +10,32 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section id="hero" className="hero">
+      <section id="hero" className="hero-section">
         <div className="container">
-          <div className="hero-content">
-            <h1>Аренда парусных катамаранов</h1>
-            <p className="hero-subtitle">Насладитесь роскошью морских путешествий на Пхукете</p>
-            <div className="hero-buttons">
-              <Link to="/booking" className="btn btn-primary">Забронировать сейчас</Link>
-              <a href="#fleet" className="btn btn-secondary">Наш флот</a>
-              <Link to="/routes" className="btn btn-secondary">Маршруты</Link>
+          <div className="row align-items-center">
+            <div className="col-lg-8">
+              <h1>Аренда парусных катамаранов на Пхукете</h1>
+              <p className="lead">Насладитесь роскошью морских путешествий по Андаманскому морю. Профессиональные капитаны, комфортабельные катамараны и незабываемые впечатления ждут вас.</p>
+              <div className="hero-buttons">
+                <Link to="/booking" className="btn btn-primary">
+                  <i className="bi bi-calendar-check me-2"></i>
+                  Забронировать сейчас
+                </Link>
+                <a href="#fleet" className="btn btn-secondary">
+                  <i className="bi bi-water me-2"></i>
+                  Наш флот
+                </a>
+                <Link to="/routes" className="btn btn-secondary">
+                  <i className="bi bi-geo-alt me-2"></i>
+                  Маршруты
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="scroll-indicator">
-            <i className="fas fa-chevron-down"></i>
+            <div className="col-lg-4 text-center">
+              <div className="hero-image">
+                <i className="bi bi-water" style={{fontSize: '8rem', opacity: 0.8, color: 'rgba(255, 255, 255, 0.3)'}}></i>
+              </div>
+            </div>
           </div>
         </div>
       </section>
