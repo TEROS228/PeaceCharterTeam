@@ -4521,3 +4521,115 @@ section {
 .menu-card {
     max-width: 100% !important;
 }
+
+/* Дополнительные исправления для фиксации скроллинга */
+.food-menu {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+.menu-grid {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+}
+
+.menu-card {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Центрирование текста в main на мобилке */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        text-align: center !important;
+    }
+    
+    .hero-section p {
+        text-align: center !important;
+    }
+    
+    .hero-section .lead {
+        text-align: center !important;
+    }
+    
+    .hero-buttons {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 !important;
+    }
+    
+    .hero-section .row {
+        text-align: center !important;
+    }
+    
+    .hero-section .col-lg-8 {
+        text-align: center !important;
+    }
+    
+    .hero-section .col-lg-4 {
+        text-align: center !important;
+    }
+}
+
+/* Дополнительные исправления для всех секций */
+@media (max-width: 768px) {
+    .calendar,
+    .fleet,
+    .food-menu,
+    .included,
+    .contact {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+    
+    .calendar-table-wrapper {
+        overflow-x: auto !important;
+        max-width: 100% !important;
+    }
+    
+    .fleet-grid {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+    
+    .included-banners {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Исправления для кнопок в hero */
+@media (max-width: 768px) {
+    .hero-section .btn-primary,
+    .hero-section .btn-secondary {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 5px 0 !important;
+        display: block !important;
+    }
+}
+
+/* Дополнительная фиксация для мобильных устройств */
+@media (max-width: 480px) {
+    .hero-section .btn-primary,
+    .hero-section .btn-secondary {
+        max-width: 100% !important;
+        margin: 3px 0 !important;
+    }
+    
+    .hero-buttons {
+        gap: 10px !important;
+    }
+}
