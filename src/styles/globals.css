@@ -75,325 +75,276 @@ body {
 
 /* Header */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(26, 82, 118, 0.1);
-}
-
-.header.scrolled {
-    padding: 1rem 0;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);                                                            
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;                                                                              
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+  height: 100%;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .logo i {
-    font-size: 2rem;
-    color: var(--secondary);
+  margin-right: 0.5rem;
 }
 
-/* Navigation */
-.nav ul {
+/* Десктопная навигация */
+.nav-desktop {
+  height: 100%;
+}
+
+.nav-desktop ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-desktop li {
+  margin-left: 2.5rem;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  display: inline-block;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-desktop a:hover {
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+/* Мобильная навигация */
+.nav-mobile {
+  display: none;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  min-width: 200px;
+  transform: translateY(-10px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-mobile.active .mobile-menu-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-item {
+  margin: 0;
+}
+
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+}
+
+.mobile-menu-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transform: translateX(4px);
+}
+
+.mobile-menu-link i {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.burger:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.burger span {
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 4px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .nav-desktop li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-desktop a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+  }
+  
+  .nav-desktop {
+    display: none;
+  }
+  
+  .nav-mobile {
+    display: block;
+  }
+
+  .header {
+    height: 70px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    min-width: auto;
+  }
+  
+  .mobile-menu-content {
+    right: 15px;
+  }
 }
 
-.nav a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 0.5rem 0;
-    letter-spacing: -0.01em;
+@media (max-width: 480px) {
+  .header {
+    height: 65px;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+  }
+  
+  .mobile-menu-content {
+    min-width: 180px;
+    right: 10px;
+  }
+  
+  .mobile-menu-link {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
 }
 
-.nav a:hover {
-    color: var(--secondary);
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .mobile-menu-content {
+    right: 5px;
+    min-width: 160px;
+  }
 }
 
-.nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary);
-    transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-    width: 100%;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(135deg, rgba(26, 82, 118, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%),
-                url('/images/hero-background.jpg'),
-                linear-gradient(135deg, #1a5276 0%, #3498db 100%);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    position: relative;
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 0 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: -0.02em;
-}
-
-.hero-subtitle {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    font-weight: 500;
-    opacity: 0.9;
-    text-align: center;
-    letter-spacing: -0.01em;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    letter-spacing: -0.01em;
-}
-
-.hero .btn-primary,
-.hero-buttons .btn-primary {
-    background: var(--secondary) !important;
-    color: var(--white) !important;
-    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3) !important;
-    border: none !important;
-    padding: 1.2rem 2.5rem !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
-    transition: all 0.3s ease !important;
-    text-align: center !important;
-    display: inline-block !important;
-    cursor: pointer !important;
-}
-
-.hero .btn-primary:hover,
-.hero-buttons .btn-primary:hover {
-    background: #e67e22 !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4) !important;
-    color: var(--white) !important;
-    text-decoration: none !important;
-}
-
-.hero .btn-secondary,
-.hero-buttons .btn-secondary {
-    background: transparent !important;
-    color: var(--white) !important;
-    border: 2px solid var(--white) !important;
-    padding: 1.2rem 2.5rem !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
-    transition: all 0.3s ease !important;
-    text-align: center !important;
-    display: inline-block !important;
-    cursor: pointer !important;
-}
-
-.hero .btn-secondary:hover,
-.hero-buttons .btn-secondary:hover {
-    background: var(--white) !important;
-    color: var(--primary) !important;
-    transform: translateY(-3px) !important;
-    text-decoration: none !important;
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-}
-
-.scroll-indicator i {
-    font-size: 2rem;
-    color: var(--white);
-    opacity: 0.7;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
-}
-
-/* Section Headers */
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-header h2 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
-}
-
-.section-header p {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.3rem;
-    color: var(--text-light);
-    font-weight: 500;
-    letter-spacing: -0.01em;
-}
-
-/* Sections */
-section {
-    padding: 6rem 0;
-}
-
-section:nth-child(even) {
-    background: var(--light);
-}
-
-/* Features Grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    text-align: center;
-    padding: 2.5rem 2rem;
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--ocean-blue) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-}
-
-.feature-icon i {
-    font-size: 2rem;
-    color: var(--white);
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.feature-card p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-/* Fleet Grid */
-.fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.yacht-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.yacht-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(40, 40, 40, 0.95) 100%);                                                                
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-menu-content {
+    background: rgba(26, 26, 26, 0.98);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-menu-link {
+    color: #e2e8f0;
+  }
+  
+  .mobile-menu-link:hover {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+  }
 }
 
 .yacht-image {
@@ -3087,7 +3038,7 @@ section:nth-child(even) {
   }
 }
 
-/* Стили для страницы маршрутов - темная тема */
+/* Стили для страницы маршрутов - исправленная версия */
 .routes-page {
   padding: 100px 0 60px;
   min-height: 100vh;
@@ -3115,7 +3066,7 @@ section:nth-child(even) {
 
 .routes-hero .lead {
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: #e2e8f0;
   margin-bottom: 0;
 }
 
@@ -3131,46 +3082,68 @@ section:nth-child(even) {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.route-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.route-card:hover::before {
+  opacity: 1;
 }
 
 .route-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  border-color: rgba(102, 126, 234, 0.3);
 }
 
 .route-image {
   position: relative;
   height: 200px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .route-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .route-card:hover .route-image img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .route-content {
   padding: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .route-name {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--white);
+  color: #ffffff;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
 .route-description {
-  color: var(--text-muted);
+  color: #cbd5e0;
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.95rem;
@@ -3185,7 +3158,7 @@ section:nth-child(even) {
 .route-detail {
   display: flex;
   align-items: center;
-  color: var(--text-muted);
+  color: #a0aec0;
   font-size: 0.9rem;
 }
 
@@ -3208,6 +3181,11 @@ section:nth-child(even) {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.route-card:hover .highlight-tag {
+  transform: scale(1.05);
 }
 
 .btn-back-custom {
@@ -3222,11 +3200,28 @@ section:nth-child(even) {
   font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-back-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-back-custom:hover::before {
+  left: 100%;
 }
 
 .btn-back-custom:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
   color: var(--white);
 }
 
@@ -3258,6 +3253,10 @@ section:nth-child(even) {
   
   .route-card {
     border-radius: 16px;
+  }
+  
+  .route-card:hover {
+    transform: translateY(-8px) scale(1.01);
   }
   
   .route-image {
@@ -3357,7 +3356,6 @@ section:nth-child(even) {
     font-size: 0.85rem;
   }
 }
-/* Дополнительные улучшения для выравнивания и компактности */
 
 /* Улучшения для кнопок */
 .btn-primary, .btn-secondary {
@@ -3552,10 +3550,10 @@ section:nth-child(even) {
   }
 }
 
-/* Стили для секции Fleet (Катамараны) */
+/* Стили для секции Fleet (Катамараны) - белая тема */
 .fleet {
   padding: 80px 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .fleet-grid {
@@ -3566,17 +3564,17 @@ section:nth-child(even) {
 }
 
 .yacht-card {
-  background: rgba(26, 26, 26, 0.9);
+  background: var(--white);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .yacht-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .yacht-image {
@@ -3632,7 +3630,7 @@ section:nth-child(even) {
 .yacht-info h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
