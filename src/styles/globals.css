@@ -2736,3 +2736,306 @@ body {
         margin-bottom: 30px;
     }
 }
+
+/* ИСПРАВЛЕНИЯ: Центрирование на ПК, FoodMenu и Fleet */
+
+/* 1. Центрирование текста на ПК тоже */
+.section-header {
+    text-align: center !important;
+}
+
+.section-header h2 {
+    text-align: center !important;
+}
+
+.section-header p {
+    text-align: center !important;
+}
+
+/* 2. Исправление FoodMenu - полноразмерные карточки без выделяющего дизайна */
+.food-menu .menu-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Три равные колонки */
+    gap: 30px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.food-menu .menu-card {
+    background: var(--white) !important;
+    border-radius: 15px !important;
+    padding: 0 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    backdrop-filter: none !important; /* Убираем blur */
+}
+
+.food-menu .menu-card::before {
+    display: none !important; /* Убираем градиентный оверлей */
+}
+
+.food-menu .menu-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.food-menu .menu-card.featured {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important; /* Убираем синюю рамку */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important; /* Обычная тень */
+}
+
+.food-menu .menu-card.featured::before {
+    display: none !important; /* Убираем градиентный оверлей */
+}
+
+.food-menu .menu-header {
+    padding: 25px 25px 15px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.food-menu .menu-header h3 {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 8px !important;
+}
+
+.food-menu .menu-price {
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    color: var(--primary) !important;
+    text-align: right !important;
+}
+
+.food-menu .menu-content {
+    padding: 15px 25px 25px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.food-menu .menu-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.food-menu .menu-item:last-child {
+    border-bottom: none !important;
+}
+
+.food-menu .menu-item-icon {
+    width: 25px !important;
+    height: 25px !important;
+    background: var(--primary) !important; /* Простой цвет вместо градиента */
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 12px !important;
+    flex-shrink: 0 !important;
+    box-shadow: none !important; /* Убираем тень */
+}
+
+.food-menu .menu-item-icon i {
+    color: white !important;
+    font-size: 0.8rem !important;
+}
+
+.food-menu .menu-item-text {
+    flex: 1 !important;
+    color: var(--text-dark) !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+}
+
+/* 3. Исправление Fleet - восстановление рамок у катамаранов */
+.fleet .yacht-card {
+    background: var(--white) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 2px solid rgba(0, 0, 0, 0.08) !important; /* Восстанавливаем рамку */
+    text-align: center !important;
+}
+
+.fleet .yacht-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    border-color: var(--primary) !important; /* Рамка становится цветной при hover */
+}
+
+.fleet .yacht-image {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.fleet .yacht-image img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+.fleet .yacht-card:hover .yacht-image img {
+    transform: scale(1.05) !important;
+}
+
+.fleet .yacht-info {
+    padding: 25px !important;
+}
+
+.fleet .yacht-info h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 15px !important;
+}
+
+.fleet .yacht-specs {
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.6 !important;
+}
+
+.fleet .yacht-features {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 25px 0 !important;
+}
+
+.fleet .yacht-features li {
+    padding: 8px 0 !important;
+    color: var(--text-dark) !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.fleet .yacht-features li::before {
+    content: "✓" !important;
+    color: var(--primary) !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+}
+
+.fleet .yacht-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+}
+
+.fleet .yacht-buttons .btn {
+    padding: 12px 24px !important;
+    font-size: 0.95rem !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.fleet .yacht-buttons .btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+    color: var(--white) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.fleet .yacht-buttons .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.fleet .yacht-buttons .btn-secondary {
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
+    box-shadow: none !important;
+}
+
+.fleet .yacht-buttons .btn-secondary:hover {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 4. Мобильная адаптация для FoodMenu */
+@media (max-width: 768px) {
+    .food-menu .menu-grid {
+        grid-template-columns: 1fr !important; /* Одна колонка на мобилке */
+        gap: 20px !important;
+    }
+    
+    .food-menu .menu-header {
+        padding: 20px 20px 10px !important;
+    }
+    
+    .food-menu .menu-content {
+        padding: 10px 20px 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-menu .menu-grid {
+        gap: 15px !important;
+    }
+    
+    .food-menu .menu-header {
+        padding: 15px 15px 8px !important;
+    }
+    
+    .food-menu .menu-content {
+        padding: 8px 15px 15px !important;
+    }
+    
+    .food-menu .menu-item {
+        padding: 8px 0 !important;
+    }
+    
+    .food-menu .menu-item-icon {
+        width: 20px !important;
+        height: 20px !important;
+        margin-right: 10px !important;
+    }
+    
+    .food-menu .menu-item-icon i {
+        font-size: 0.7rem !important;
+    }
+    
+    .food-menu .menu-item-text {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* 5. Мобильная адаптация для Fleet */
+@media (max-width: 768px) {
+    .fleet .yacht-card {
+        margin-bottom: 20px !important;
+    }
+    
+    .fleet .yacht-info {
+        padding: 20px !important;
+    }
+    
+    .fleet .yacht-info h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .fleet .yacht-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .fleet .yacht-buttons .btn {
+        width: 100% !important;
+    }
+}
