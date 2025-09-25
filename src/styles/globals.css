@@ -3362,3 +3362,293 @@ body {
         padding: 14px 24px !important;
     }
 }
+
+/* ИСПРАВЛЕНИЯ: Увеличение фотографий Fleet и исправление углов FoodMenu */
+
+/* 1. Увеличение длины фотографий катамаранов */
+.fleet .yacht-image img {
+    width: 100% !important;
+    height: 350px !important; /* Увеличиваем высоту с 280px до 350px */
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+}
+
+/* 2. Исправление углов карточек FoodMenu - убираем все помехи */
+.food-menu {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    overflow: visible !important; /* Убираем overflow который может обрезать углы */
+}
+
+.food-menu .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .section-header {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .menu-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important; /* Убираем overflow */
+    position: relative !important;
+    z-index: 1 !important; /* Устанавливаем z-index */
+}
+
+.food-menu .menu-card {
+    background: var(--white) !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: visible !important; /* Убираем overflow */
+    backdrop-filter: none !important;
+    min-height: 400px !important;
+    z-index: 2 !important; /* Устанавливаем z-index выше сетки */
+}
+
+.food-menu .menu-card::before {
+    display: none !important;
+}
+
+.food-menu .menu-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
+    z-index: 3 !important; /* При hover поднимаем выше */
+}
+
+.food-menu .menu-card.featured {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+.food-menu .menu-card.featured::before {
+    display: none !important;
+}
+
+.food-menu .menu-header {
+    padding: 35px 35px 20px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    position: relative !important;
+    z-index: 2 !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .menu-header h3 {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 12px !important;
+}
+
+.food-menu .menu-price {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    color: var(--primary) !important;
+    text-align: right !important;
+}
+
+.food-menu .menu-content {
+    padding: 20px 35px 35px !important;
+    position: relative !important;
+    z-index: 2 !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .menu-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .menu-item:last-child {
+    border-bottom: none !important;
+}
+
+.food-menu .menu-item-icon {
+    width: 30px !important;
+    height: 30px !important;
+    background: var(--primary) !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 15px !important;
+    flex-shrink: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+.food-menu .menu-item-icon i {
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+.food-menu .menu-item-text {
+    flex: 1 !important;
+    color: var(--text-dark) !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    overflow: visible !important; /* Убираем overflow */
+}
+
+/* 3. Дополнительные исправления для правильного отображения углов */
+.food-menu .menu-card * {
+    overflow: visible !important; /* Убираем overflow у всех дочерних элементов */
+}
+
+.food-menu .menu-card .menu-header * {
+    overflow: visible !important;
+}
+
+.food-menu .menu-card .menu-content * {
+    overflow: visible !important;
+}
+
+.food-menu .menu-card .menu-item * {
+    overflow: visible !important;
+}
+
+/* 4. Мобильная адаптация для увеличенных фотографий Fleet */
+@media (max-width: 768px) {
+    .fleet .yacht-image img {
+        height: 300px !important; /* Увеличиваем высоту на мобилке с 250px до 300px */
+    }
+    
+    .fleet .yacht-card {
+        margin-bottom: 25px !important;
+    }
+    
+    .fleet .yacht-info {
+        padding: 25px !important;
+    }
+    
+    .fleet .yacht-info h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    .fleet .yacht-buttons {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    .fleet .yacht-buttons .btn {
+        width: 100% !important;
+        padding: 14px 24px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .fleet .yacht-image img {
+        height: 280px !important; /* Увеличиваем высоту на маленьких экранах */
+    }
+}
+
+/* 5. Мобильная адаптация для FoodMenu с исправленными углами */
+@media (max-width: 768px) {
+    .food-menu {
+        padding: 60px 0 !important;
+        overflow: visible !important; /* Убираем overflow на мобилке */
+    }
+    
+    .food-menu .container {
+        padding: 0 15px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-card {
+        min-height: 350px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-header {
+        padding: 25px 25px 15px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-content {
+        padding: 15px 25px 25px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-item {
+        padding: 12px 0 !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-menu {
+        padding: 40px 0 !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .container {
+        padding: 0 10px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-grid {
+        gap: 20px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-card {
+        min-height: 320px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-header {
+        padding: 20px 20px 12px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-content {
+        padding: 12px 20px 20px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-item {
+        padding: 10px 0 !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-item-icon {
+        width: 25px !important;
+        height: 25px !important;
+        margin-right: 12px !important;
+        overflow: visible !important;
+    }
+    
+    .food-menu .menu-item-icon i {
+        font-size: 0.9rem !important;
+    }
+    
+    .food-menu .menu-item-text {
+        font-size: 0.95rem !important;
+        overflow: visible !important;
+    }
+}
