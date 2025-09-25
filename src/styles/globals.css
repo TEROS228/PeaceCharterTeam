@@ -3809,3 +3809,221 @@ body {
         padding-right: 10px;
     }
 }
+
+/* Центрирование текста на мобилке для всех секций */
+@media (max-width: 768px) {
+    .section-header {
+        text-align: center !important;
+    }
+    
+    .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .section-header p {
+        text-align: center !important;
+    }
+    
+    /* Специально для календаря */
+    .calendar .section-header {
+        text-align: center !important;
+    }
+    
+    .calendar .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .calendar .section-header p {
+        text-align: center !important;
+    }
+    
+    /* Специально для флота */
+    .fleet .section-header {
+        text-align: center !important;
+    }
+    
+    .fleet .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .fleet .section-header p {
+        text-align: center !important;
+    }
+    
+    /* Специально для меню */
+    .food-menu .section-header {
+        text-align: center !important;
+    }
+    
+    .food-menu .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .food-menu .section-header p {
+        text-align: center !important;
+    }
+    
+    /* Специально для включено */
+    .included .section-header {
+        text-align: center !important;
+    }
+    
+    .included .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .included .section-header p {
+        text-align: center !important;
+    }
+    
+    /* Специально для контактов */
+    .contact .section-header {
+        text-align: center !important;
+    }
+    
+    .contact .section-header h2 {
+        text-align: center !important;
+    }
+    
+    .contact .section-header p {
+        text-align: center !important;
+    }
+}
+
+/* Улучшенные стили для карточек "Что входит в стоимость" */
+.included-banners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.banner-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.banner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.banner-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.banner-card.cyan .banner-icon {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+.banner-card.pink .banner-icon {
+    background: linear-gradient(135deg, #e83e8c, #d63384);
+}
+
+.banner-card.green .banner-icon {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.banner-card.orange .banner-icon {
+    background: linear-gradient(135deg, #fd7e14, #e55a00);
+}
+
+.banner-card.blue .banner-icon {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.banner-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Мобильная адаптация для карточек "Что входит в стоимость" */
+@media (max-width: 768px) {
+    .included-banners {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .banner-card {
+        padding: 25px;
+        border-radius: 16px;
+    }
+    
+    .banner-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .banner-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .banner-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .included-banners {
+        gap: 15px;
+        margin-top: 25px;
+    }
+    
+    .banner-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .banner-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .banner-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+}
