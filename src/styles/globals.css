@@ -4212,3 +4212,184 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Обновленные стили для карточек "Что входит в стоимость" */
+.included-banners {
+    display: grid;
+    grid-template-columns: 1fr; /* Всегда одна колонка */
+    gap: 25px;
+    margin-top: 50px;
+    max-width: 500px; /* Ограничиваем ширину для красивого вида */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left; /* Текст слева для горизонтального расположения */
+}
+
+.banner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.banner-card:hover::before {
+    opacity: 1;
+}
+
+.banner-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.banner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Увеличиваем размер иконки */
+    height: 80px;
+    border-radius: 20px;
+    font-size: 2rem; /* Увеличиваем размер иконки */
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Не сжимаем иконку */
+}
+
+.banner-card:hover .banner-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.banner-card.cyan .banner-icon {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+}
+
+.banner-card.pink .banner-icon {
+    background: linear-gradient(135deg, #e83e8c 0%, #d63384 100%);
+}
+
+.banner-card.green .banner-icon {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+}
+
+.banner-card.orange .banner-icon {
+    background: linear-gradient(135deg, #fd7e14 0%, #e55a00 100%);
+}
+
+.banner-card.blue .banner-icon {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    flex: 1; /* Занимаем оставшееся пространство */
+}
+
+.banner-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.banner-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .included-banners {
+        gap: 20px;
+        margin-top: 40px;
+        max-width: 100%;
+    }
+    
+    .banner-card {
+        padding: 25px;
+        border-radius: 20px;
+        gap: 20px;
+    }
+    
+    .banner-card:hover {
+        transform: translateY(-6px) scale(1.01);
+    }
+    
+    .banner-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        border-radius: 16px;
+    }
+    
+    .banner-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .banner-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .included-banners {
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .banner-card {
+        padding: 20px;
+        border-radius: 16px;
+        gap: 15px;
+        flex-direction: column; /* На очень маленьких экранах - вертикально */
+        text-align: center;
+    }
+    
+    .banner-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+        border-radius: 14px;
+    }
+    
+    .banner-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .banner-content p {
+        font-size: 0.85rem;
+    }
+}
