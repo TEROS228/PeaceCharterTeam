@@ -1,5 +1,5 @@
-import React from 'react'
-import './FoodMenu.css'
+import React from 'react';
+import './FoodMenu.css';
 
 const FoodMenu: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const FoodMenu: React.FC = () => {
           <h2>Меню питания</h2>
           <p>Наслаждайтесь вкусными блюдами во время вашего морского приключения</p>
         </div>
-        
+
         <div className="menu-grid">
           {/* Меню 1 - Морское */}
           <div className="menu-card menu-card-ocean">
@@ -18,9 +18,7 @@ const FoodMenu: React.FC = () => {
               <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
             <div className="menu-card-image">
-              <div className="menu-card-image-placeholder">
-                <i className="fas fa-fish"></i>
-              </div>
+              <img src="/images/seafood.jpg" alt="Морское меню" />
             </div>
             <div className="menu-card-content">
               <h3 className="menu-card-title">Свежие морепродукты</h3>
@@ -64,9 +62,7 @@ const FoodMenu: React.FC = () => {
               <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
             <div className="menu-card-image">
-              <div className="menu-card-image-placeholder">
-                <i className="fas fa-crown"></i>
-              </div>
+              <img src="/images/popular.jpg" alt="Популярное меню" />
             </div>
             <div className="menu-card-content">
               <h3 className="menu-card-title">Избранное меню</h3>
@@ -110,9 +106,7 @@ const FoodMenu: React.FC = () => {
               <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
             <div className="menu-card-image">
-              <div className="menu-card-image-placeholder">
-                <i className="fas fa-pepper-hot"></i>
-              </div>
+              <img src="/images/thai.jpg" alt="Тайское меню" />
             </div>
             <div className="menu-card-content">
               <h3 className="menu-card-title">Аутентичная кухня</h3>
@@ -151,7 +145,7 @@ const FoodMenu: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FoodMenu
+export default FoodMenu;
