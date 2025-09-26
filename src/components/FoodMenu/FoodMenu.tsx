@@ -1,4 +1,5 @@
 import React from 'react'
+import './FoodMenu.css'
 
 const FoodMenu: React.FC = () => {
   return (
@@ -10,87 +11,141 @@ const FoodMenu: React.FC = () => {
         </div>
         
         <div className="menu-grid">
-          {/* Меню 1 */}
-          <div className="menu-card">
-            <div className="menu-header">
-              <h3>Меню 1</h3>
-              <div className="menu-price">500 THB/чел</div>
+          {/* Меню 1 - Морское */}
+          <div className="menu-card menu-card-ocean">
+            <div className="menu-card-header">
+              <div className="menu-card-badge">Морское меню</div>
+              <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
-            <div className="menu-content">
-              <ul className="menu-items">
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-bread-slice"></i></div>
-                  <span className="menu-item-text">Брускетта с сыром и рыбой</span>
+            <div className="menu-card-image">
+              <div className="menu-card-image-placeholder">
+                <i className="fas fa-fish"></i>
+              </div>
+            </div>
+            <div className="menu-card-content">
+              <h3 className="menu-card-title">Свежие морепродукты</h3>
+              <p className="menu-card-description">Классические блюда из свежих морепродуктов</p>
+              <ul className="menu-card-items">
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-bread-slice"></i>
+                  </div>
+                  <span>Брускетта с сыром и рыбой</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-leaf"></i></div>
-                  <span className="menu-item-text">Салат овощной</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-leaf"></i>
+                  </div>
+                  <span>Салат овощной</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-fish"></i></div>
-                  <span className="menu-item-text">Сибас в духовке</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-fish"></i>
+                  </div>
+                  <span>Сибас в духовке</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-utensils"></i></div>
-                  <span className="menu-item-text">Жареный рис с овощами</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-utensils"></i>
+                  </div>
+                  <span>Жареный рис с овощами</span>
                 </li>
               </ul>
+            </div>
+            <div className="menu-card-footer">
+              <button className="menu-card-btn">Выбрать меню</button>
             </div>
           </div>
 
-          {/* Меню 2 */}
-          <div className="menu-card featured">
-            <div className="menu-header">
-              <h3>Меню 2</h3>
-              <div className="menu-price">500 THB/чел</div>
+          {/* Меню 2 - Популярное */}
+          <div className="menu-card menu-card-popular featured">
+            <div className="menu-card-header">
+              <div className="menu-card-badge popular">Популярное</div>
+              <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
-            <div className="menu-content">
-              <ul className="menu-items">
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-cheese"></i></div>
-                  <span className="menu-item-text">Брускетта с сыром и рыбой</span>
+            <div className="menu-card-image">
+              <div className="menu-card-image-placeholder">
+                <i className="fas fa-crown"></i>
+              </div>
+            </div>
+            <div className="menu-card-content">
+              <h3 className="menu-card-title">Избранное меню</h3>
+              <p className="menu-card-description">Самое популярное меню среди наших гостей</p>
+              <ul className="menu-card-items">
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-cheese"></i>
+                  </div>
+                  <span>Брускетта с сыром и рыбой</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-shrimp"></i></div>
-                  <span className="menu-item-text">Овощной салат с креветками</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-shrimp"></i>
+                  </div>
+                  <span>Овощной салат с креветками</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-drumstick-bite"></i></div>
-                  <span className="menu-item-text">Крылышки запеченные в духовке</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-drumstick-bite"></i>
+                  </div>
+                  <span>Крылышки запеченные в духовке</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-potato"></i></div>
-                  <span className="menu-item-text">Картофель по домашнему</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-potato"></i>
+                  </div>
+                  <span>Картофель по домашнему</span>
                 </li>
               </ul>
+            </div>
+            <div className="menu-card-footer">
+              <button className="menu-card-btn">Выбрать меню</button>
             </div>
           </div>
 
-          {/* Меню 3 */}
-          <div className="menu-card">
-            <div className="menu-header">
-              <h3>Меню 3</h3>
-              <div className="menu-price">500 THB/чел</div>
+          {/* Меню 3 - Тайское */}
+          <div className="menu-card menu-card-thai">
+            <div className="menu-card-header">
+              <div className="menu-card-badge thai">Тайское меню</div>
+              <div className="menu-card-price">500 THB<span>/чел</span></div>
             </div>
-            <div className="menu-content">
-              <ul className="menu-items">
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-utensils"></i></div>
-                  <span className="menu-item-text">Брускетта с сыром и рыбой</span>
+            <div className="menu-card-image">
+              <div className="menu-card-image-placeholder">
+                <i className="fas fa-pepper-hot"></i>
+              </div>
+            </div>
+            <div className="menu-card-content">
+              <h3 className="menu-card-title">Аутентичная кухня</h3>
+              <p className="menu-card-description">Традиционные тайские блюда с характерными вкусами</p>
+              <ul className="menu-card-items">
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-utensils"></i>
+                  </div>
+                  <span>Брускетта с сыром и рыбой</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-apple-alt"></i></div>
-                  <span className="menu-item-text">Папайя салат</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-apple-alt"></i>
+                  </div>
+                  <span>Папайя салат</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-mortar-pestle"></i></div>
-                  <span className="menu-item-text">Том ям</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-mortar-pestle"></i>
+                  </div>
+                  <span>Том ям</span>
                 </li>
-                <li className="menu-item">
-                  <div className="menu-item-icon"><i className="fas fa-utensil-spoon"></i></div>
-                  <span className="menu-item-text">Жареный рис с курицей</span>
+                <li className="menu-card-item">
+                  <div className="menu-card-item-icon">
+                    <i className="fas fa-utensil-spoon"></i>
+                  </div>
+                  <span>Жареный рис с курицей</span>
                 </li>
               </ul>
+            </div>
+            <div className="menu-card-footer">
+              <button className="menu-card-btn">Выбрать меню</button>
             </div>
           </div>
         </div>

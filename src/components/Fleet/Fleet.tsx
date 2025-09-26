@@ -1,5 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Fleet.css'; // Подключаем стили
 
 const Fleet: React.FC = () => {
   return (
@@ -56,7 +57,7 @@ const Fleet: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Fleet
+export default Fleet;

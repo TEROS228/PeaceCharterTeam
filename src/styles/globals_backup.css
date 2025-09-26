@@ -234,40 +234,10 @@ body {
     line-height: 1.5;
 }
 
-/* Обновленные стили для Fleet */
+/* Восстановление Fleet */
 .fleet {
     padding: 80px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.fleet .section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.fleet .section-header h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-}
-
-.fleet .section-header p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.fleet .fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 0 20px;
 }
 
 .fleet .yacht-card {
@@ -306,43 +276,6 @@ body {
 
 .fleet .yacht-card:hover .yacht-image img {
     transform: scale(1.05);
-}
-
-.fleet .yacht-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    padding: 1rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.fleet .yacht-card:hover .yacht-overlay {
-    opacity: 1;
-}
-
-.fleet .yacht-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.fleet .btn-back-custom {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: var(--primary);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.fleet .btn-back-custom:hover {
-    background: var(--secondary);
 }
 
 .fleet .yacht-info {
@@ -429,7 +362,6 @@ body {
     color: var(--white);
     transform: translateY(-3px);
 }
-
 
 /* Мобильная адаптация */
 @media (max-width: 768px) {
